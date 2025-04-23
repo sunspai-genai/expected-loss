@@ -78,7 +78,7 @@ if selected_section == "Use Case Approach":
     """)
     st.divider()
     image6 = Image.open("images/tdsp-lifecycle2.png")
-    st.image(image6, caption="Data Science Life Cycle", use_container_width=True)
+    st.image(image6, caption="Data Science Life Cycle", use_container_width=False)
     st.markdown("""
     **Data Science Life Cycle**: The process of data science involves several key steps, including data collection, data cleaning, exploratory data analysis, feature engineering, model development, model evaluation, and model deployment. Each step is crucial for building a successful predictive model.
     The data science life cycle is an iterative process, meaning that you may need to revisit previous steps as you gain new insights or as the data changes. This flexibility allows for continuous improvement and adaptation to new challenges.

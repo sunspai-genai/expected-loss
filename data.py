@@ -243,80 +243,59 @@ pd_variables = [
         "Description": "Unique identifier for the contract",
         "Business Hypothesis": "Identification and indexing purposes"
     },
-    {
-        "Variable Name": "CreditScoreCategory",
-        "Description": "Borrower risk rating (e.g., High, Medium, Low)",
-        "Business Hypothesis": "Primary indicator of default probability"
-    },
-    {
-        "Variable Name": "Industry",
-        "Description": "Sector in which the borrower operates",
-        "Business Hypothesis": "Some industries have higher default risk"
-    },
-    {
-        "Variable Name": "Region",
-        "Description": "Geographical location of the borrower",
-        "Business Hypothesis": "Regional economic conditions may influence default rates"
-    },
-    {
-        "Variable Name": "CompanySize",
-        "Description": "Classification as Small, Medium, or Large",
-        "Business Hypothesis": "Smaller companies often have higher default probabilities"
-    },
-    {
-        "Variable Name": "CompanyAge",
-        "Description": "Age of the company in years",
-        "Business Hypothesis": "Younger companies are more prone to financial instability"
-    },
-    {
-        "Variable Name": "LoanTenureMonths",
-        "Description": "Length of the loan or lease in months",
-        "Business Hypothesis": "Longer tenures may lead to greater uncertainty and risk"
-    },
-    {
-        "Variable Name": "CurrentDelinquencyStatus",
-        "Description": "Current payment status (e.g., Current, 30+ Days, 60+ Days)",
-        "Business Hypothesis": "Recent delinquencies are strong predictors of future default"
-    },
-    {
-        "Variable Name": "HasPriorDefaults",
-        "Description": "Binary indicator if borrower has defaulted before",
-        "Business Hypothesis": "Historical behavior is a strong indicator of default risk"
-    },
-    {
-        "Variable Name": "TotalOutstanding",
-        "Description": "Total amount currently owed by borrower",
-        "Business Hypothesis": "Higher outstanding debt may lead to default stress"
-    },
-    {
-        "Variable Name": "DebtToEquity",
-        "Description": "Financial leverage of the borrower",
-        "Business Hypothesis": "Highly leveraged companies are more likely to default"
-    },
-    {
-        "Variable Name": "CurrentRatio",
-        "Description": "Current assets divided by current liabilities",
-        "Business Hypothesis": "Liquidity issues can increase probability of default"
-    },
-    {
-        "Variable Name": "InterestCoverage",
-        "Description": "Earnings before interest divided by interest expense",
-        "Business Hypothesis": "Low ratios suggest inability to cover interest payments"
-    },
-    {
-        "Variable Name": "% Change in Revenue",
-        "Description": "Revenue growth or decline from the previous period",
-        "Business Hypothesis": "Declining revenue increases financial stress"
-    },
-    {
-        "Variable Name": "% Change in Net Profit",
-        "Description": "Profit growth or decline from the previous period",
-        "Business Hypothesis": "Negative profitability trends increase default risk"
-    },
+    
     {
         "Variable Name": "PD",
         "Description": "Probability of Default - target variable",
         "Business Hypothesis": "Target output for model prediction"
+    },
+        {"Variable Name":"CompanySize",
+        "Description": "Size of the company, typically measured in terms of revenue or number of employees.",
+        "Business Hypothesis": "Larger companies tend to be more stable and diversified, thus less likely to default."
+    },
+    {"Variable Name":"Industry",
+        "Description": "Sector or type of business activity the company is engaged in.",
+        "Business Hypothesis": "Some industries have higher inherent risks (e.g., construction vs. utilities), impacting default probability."
+    },
+    {"Variable Name":"Region",
+        "Description": "Geographical location of the company’s operations or headquarters.",
+        "Business Hypothesis": "Economic and political conditions vary by region and can influence credit risk."
+    },
+    {"Variable Name":"CreditScore",
+        "Description": "A numerical score representing the creditworthiness of a company.",
+        "Business Hypothesis": "A lower credit score generally correlates with higher default risk."
+    },
+    {"Variable Name":"PriorDefault",
+        "Description": "Indicator of whether the company has defaulted previously (binary variable).",
+        "Business Hypothesis": "Past defaults strongly predict future credit behavior and risk of default."
+    },
+    {"Variable Name":"RegionRiskScore",
+        "Description": "Quantitative measure of the economic risk associated with the region.",
+        "Business Hypothesis": "High regional risk scores indicate higher external risk pressures affecting company performance."
+    },
+    {"Variable Name":"MacroEconomicIndex",
+        "Description": "Composite index reflecting the overall health of the macroeconomy.",
+        "Business Hypothesis": "A weak macroeconomic environment increases the likelihood of financial stress and default."
+    },
+    {"Variable Name":"PctChangeRevenue",
+        "Description": "Percentage change in revenue over a specific period.",
+        "Business Hypothesis": "Declining revenue may signal deteriorating financial health and increased default probability."
+    },
+    {"Variable Name":"PctChangeNetProfit",
+        "Description": "Percentage change in net profit over a specific period.",
+        "Business Hypothesis": "Shrinking or negative profits can indicate financial distress and a higher risk of default."
+    },
+    {"Variable Name":"CurrentRatio",
+        "Description": "Ratio of current assets to current liabilities.",
+        "Business Hypothesis": "Low current ratios may suggest liquidity problems, increasing the likelihood of default."
+    },
+    {"Variable Name":"DebtToEquity",
+        "Description": "Ratio of total debt to shareholders' equity.",
+        "Business Hypothesis": "Higher leverage increases financial risk, making companies more vulnerable to default."
+    },
+    {"Variable Name":"InterestCoverage",
+        "Description": "Ratio of earnings before interest and taxes (EBIT) to interest expenses.",
+        "Business Hypothesis": "Low interest coverage indicates difficulty in meeting debt obligations, raising default risk."
     }
 ]
 ######################################################################################################
