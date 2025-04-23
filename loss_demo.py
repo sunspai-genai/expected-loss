@@ -95,36 +95,36 @@ if selected_section == "Use Case Approach":
     #with col1:
     st.subheader("Machine Learning Approach - Level 1")
     image7 = Image.open("images/MLMethod/ml.png")
-    st.image(image7, caption="Machine Learning Approach", use_column_width=False)
+    st.image(image7, caption="Machine Learning Approach", use_container_width=False)
     #with col2:
     st.subheader("Automated ML Approach")
     image8 = Image.open("images/MLMethod/ml3.png")
-    st.image(image8, caption="Automated Approach", use_column_width=False)
+    st.image(image8, caption="Automated Approach", use_container_width=False)
 
     st.divider()
     st.subheader("Model Development Process")
     image9 = Image.open("images/modeldevstep.png")
-    st.image(image9, caption="Model Development Process", use_column_width=True)
+    st.image(image9, caption="Model Development Process", use_container_width=True)
 
     st.divider()
     st.subheader("Machine Learning Algorithms")
     image10 = Image.open("images/model.png")
-    st.image(image10, caption="Machine Learning Algorithms", use_column_width=True)
+    st.image(image10, caption="Machine Learning Algorithms", use_container_width=True)
 
     st.divider()
     st.subheader("Model Comparison")
     image11 = Image.open("images/algoadv.png")
-    st.image(image11, caption="Model Comparison", use_column_width=True)
+    st.image(image11, caption="Model Comparison", use_container_width=True)
 
     st.divider()
     st.subheader("Model Evaluation")
     image11 = Image.open("images/eval.png")
-    st.image(image11, caption="Model Evaluation Metric", use_column_width=True)
+    st.image(image11, caption="Model Evaluation Metric", use_container_width=True)
 
     st.divider()
     st.subheader("Python Packages")
     image11 = Image.open("images/pythonpackasges.png")
-    st.image(image11, caption="Python Packages", use_column_width=True)
+    st.image(image11, caption="Python Packages", use_container_width=True)
 
     st.divider()
     st.markdown("""           
@@ -524,7 +524,7 @@ elif selected_section == "Model Development & Evaluation":
     """)
     st.subheader("Train Test Split")
     image = Image.open("images/traintest.png")
-    st.image(image, caption="Model Evaluation Metrics", use_column_width=False)
+    st.image(image, caption="Model Evaluation Metrics", use_container_width=False)
 
     st.sidebar.title("Select Model Dataset")
     model_choice = st.sidebar.radio("Choose:", ["Probability of Default", "Loss Given Default", "Exposure at Default"])
@@ -577,7 +577,7 @@ elif selected_section == "Model Development & Evaluation":
             st.subheader("🔸 Detailed Classification Report")
             st.dataframe(df_report)
             st.divider()
-            st.image("images/pd/output.png", caption="Confusion Matrix & ROC Curve", use_column_width=True)
+            st.image("images/pd/output.png", caption="Confusion Matrix & ROC Curve", use_container_width=True)
             st.markdown("""
             - **Confusion Matrix**: This matrix shows the number of correct and incorrect predictions made by the model.
             - **ROC Curve**: The ROC curve illustrates the trade-off between sensitivity and specificity for every possible cut-off. The area under the ROC curve (AUC) is a measure of the model's ability to distinguish between positive and negative classes.""")
@@ -597,9 +597,9 @@ elif selected_section == "Model Development & Evaluation":
                         """)
             st.subheader("LGD Model - Model Evaluation")
             image = Image.open("images/lgd/output.png")
-            st.image(image, caption="Actual vs Predicted", use_column_width=False)
-            st.image("images/lgd/lgd2.png", caption="Residual Distribution", use_column_width=False)
-            st.image("images/lgd/lgd3.png", caption="Feature Importance", use_column_width=False)
+            st.image(image, caption="Actual vs Predicted", use_container_width=False)
+            st.image("images/lgd/lgd2.png", caption="Residual Distribution", use_container_width=False)
+            st.image("images/lgd/lgd3.png", caption="Feature Importance", use_container_width=False)
 
     if model_choice == "Exposure at Default":
         st.subheader("Exposure at Default model - Model Evaluation")
@@ -616,9 +616,9 @@ elif selected_section == "Model Development & Evaluation":
                     """)
         st.subheader("EAD Model - Model Evaluation")
         image = Image.open("images/ead/ead1.png")
-        st.image(image, caption="Actual vs Predicted", use_column_width=False)
-        st.image("images/ead/ead2.png", caption="Residual Distribution", use_column_width=False)
-        st.image("images/ead/ead3.png", caption="Feature Importance", use_column_width=False)
+        st.image(image, caption="Actual vs Predicted", use_container_width=False)
+        st.image("images/ead/ead2.png", caption="Residual Distribution", use_container_width=False)
+        st.image("images/ead/ead3.png", caption="Feature Importance", use_container_width=False)
         
 ###########################################***************************************************************************************
 # --- Section: Model Explainability ---
@@ -649,7 +649,7 @@ elif selected_section == "Explainability & Governance":
         st.subheader("📌 PD Model EDA (Probability of Default)")
         st.subheader("ELI5 (Explain like I am 5)")
         image = Image.open("images/pd/pd_eli5.jpeg")
-        st.image(image, caption="ELI5 Feature Importance", use_column_width=False)
+        st.image(image, caption="ELI5 Feature Importance", use_container_width=False)
         st.markdown("""
                     - In this table, the Weight column gives the importance score associated with each feature 
                     - while the Feature column displays the name of the input variable that contributes to the models predictions. 
@@ -660,7 +660,7 @@ elif selected_section == "Explainability & Governance":
         st.divider()
         st.subheader("SHAP (SHapley Additive exPlanations) - Global")
         image = Image.open("images/pd/pd_shap.png")
-        st.image(image, caption="SHAP Global", use_column_width=False)
+        st.image(image, caption="SHAP Global", use_container_width=False)
         st.markdown("""
                     - **SHAP**: This technique assigns each feature an importance value for a particular prediction, allowing us to understand the impact of each feature on the model's output.
                     - The SHAP plot shows the distribution of SHAP values for each feature across all instances in the dataset.
@@ -694,7 +694,7 @@ elif selected_section == "Explainability & Governance":
         st.divider()
         st.subheader("Partial Dependence Plots (PDP)")
         image = Image.open("images/pd/pd_pdp.png")
-        st.image(image, caption="PDP", use_column_width=True)
+        st.image(image, caption="PDP", use_container_width=True)
         st.markdown("""
                     - **Partial Dependence Plots (PDP)**: These plots show the relationship between a feature and the predicted outcome, while averaging out the effects of other features.
                     - The PDP plot illustrates how the predicted probability of default changes with different values of the selected feature, while keeping other features constant.
@@ -722,10 +722,10 @@ elif selected_section == "Explainability & Governance":
 elif selected_section == "Automated ML Pipeline":
     st.subheader("ML Pipeline")
     image12 = Image.open("images/A3F9AD6E-FB51-4400-B3E9-6C1FF164C0EE.jpeg")
-    st.image(image12, caption="ML Pipeline", use_column_width=True)
+    st.image(image12, caption="ML Pipeline", use_container_width=True)
     #st.subheader("ML Pipeline")
     st.divider()
     image5 = Image.open("images/pipe.jpeg")
-    st.image(image5, caption="Automated ML Pipeline", use_column_width=True)
+    st.image(image5, caption="Automated ML Pipeline", use_container_width=True)
 
 
