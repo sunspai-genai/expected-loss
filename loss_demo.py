@@ -576,6 +576,14 @@ elif selected_section == "Model Development & Evaluation":
 
             st.subheader("🔸 Detailed Classification Report")
             st.dataframe(df_report)
+            st.markdown("""- **Evaluation Metrics**:
+                            - **Accuracy**: Overall correctness of the model.
+                            - **Precision**: Correctly predicted positive observations to the total predicted positives.
+                            - **Recall**: Correctly predicted positive observations to all actual positives.
+                            - **F1-Score**: Weighted average of Precision and Recall.
+                            - **Support**: Number of actual occurrences of the class in the specified dataset.
+                        """)
+
             st.divider()
             st.image("images/pd/output.png", caption="Confusion Matrix & ROC Curve", use_container_width=True)
             st.markdown("""
